@@ -5,29 +5,29 @@
 class Sourceseedy < Formula
   desc "Easily switch between source directories"
   homepage "https://github.com/drewstinnett/sourceseedy"
-  version "0.2.1"
+  version "0.2.2"
   license "BSD-2-Clause"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.1/sourceseedy-0.2.1_macOS_amd64.tar.gz"
-      sha256 "2c630d7667b5e9fa87e16a4fdf1b25159768edc591d99ddff07e2d5e94d51db4"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.2/sourceseedy-0.2.2_macOS_amd64.tar.gz"
+      sha256 "33029ec66af667af4505bc7d8baf0df4da45e70dfaa547302c32ddb57c6c069b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.1/sourceseedy-0.2.1_macOS_arm64.tar.gz"
-      sha256 "fac512c5cda5a0e0519efdbcb62b43b672c522602ca205cf998bd87eda444fe6"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.2/sourceseedy-0.2.2_macOS_arm64.tar.gz"
+      sha256 "9a2ce1cf7318bbae694966c1986833ed79a150313102061ad25d3bca3282f4f7"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.1/sourceseedy-0.2.1_linux_amd64.tar.gz"
-      sha256 "83622f6f94ed80ee9c28b9eb0558dcd1d8d93dc7c02ac4dbce901002a343114e"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.2/sourceseedy-0.2.2_linux_amd64.tar.gz"
+      sha256 "19616d5edbcf0bf7e964a25933c107565cd921cd16575af775d2a44032983809"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.1/sourceseedy-0.2.1_linux_arm64.tar.gz"
-      sha256 "237f763ee113f4f209e964490877f2e7a43ddfcb0e12b02864632c64d06733d6"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.2/sourceseedy-0.2.2_linux_arm64.tar.gz"
+      sha256 "e030830ade5948776cd8892a0b3b6afc8cf6810ff7a8f31227871c374396ae5e"
     end
   end
 
