@@ -5,34 +5,45 @@
 class Sourceseedy < Formula
   desc "Easily switch between source directories"
   homepage "https://github.com/drewstinnett/sourceseedy"
-  version "0.2.4"
+  version "0.2.5"
   license "BSD-2-Clause"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.4/sourceseedy-0.2.4_macOS_arm64.tar.gz"
-      sha256 "2aa17b7dab4b389e4f309179a43c45e541fe5528ab41db1cff2c2fa2174a99b4"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.4/sourceseedy-0.2.4_macOS_amd64.tar.gz"
-      sha256 "c50cb90b90a45ecbad43a7afdde11c724aff7c985b9878899f1c1b0edd577ebe"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_macOS_amd64.tar.gz"
+      sha256 "6c32613174bfd8878fe28769b2c2f1fed19c0a9a9b4838c5b530260de452bcb5"
+
+      def install
+        bin.install "sourceseedy"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_macOS_arm64.tar.gz"
+      sha256 "0ac2fa187853df8869e9dd4557bf4a70ad7d35339cd83561239d24f75ee931f1"
+
+      def install
+        bin.install "sourceseedy"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.4/sourceseedy-0.2.4_linux_amd64.tar.gz"
-      sha256 "138df6e55e08cc0a7552fb839e2f8097aec17359c8ef0abed9d1944574f41a90"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.4/sourceseedy-0.2.4_linux_arm64.tar.gz"
-      sha256 "106c5f349d37fb3fbdb89bd01fc1f10140891f4b1e35fa6cc38a89840bcc1e8e"
-    end
-  end
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_linux_arm64.tar.gz"
+      sha256 "cb3ae921c5f063c16a1f802c0a7dd6db022fb9fc4c25f0dee93398717b11fdb2"
 
-  def install
-    bin.install "sourceseedy"
+      def install
+        bin.install "sourceseedy"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_linux_amd64.tar.gz"
+      sha256 "d3b88bccda735f821f4f871c52c9be276aa6fbe250881ea5d16195f29b1637e4"
+
+      def install
+        bin.install "sourceseedy"
+      end
+    end
   end
 
   def caveats; <<~EOS
