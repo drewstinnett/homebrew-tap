@@ -5,33 +5,44 @@
 class Flipip < Formula
   desc "Get reverse IP pointers on the cli"
   homepage "https://github.com/drewstinnett/flipip"
-  version "0.1.0"
+  version "0.1.1"
   license "APACHE-2.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.0/flipip-0.1.0_macOS_arm64.tar.gz"
-      sha256 "52fd0bbdb2c07180cc6170f8629246d3361d068dd9c1cfcf759bc32c1079fd84"
+      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.1/flipip-0.1.1_macOS_arm64.tar.gz"
+      sha256 "8171c4fa50ea8e9298e6678c4c17b8008e8627eecdfd959935b0d7560663f484"
+
+      def install
+        bin.install "flipip"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.0/flipip-0.1.0_macOS_amd64.tar.gz"
-      sha256 "5d1ef288c57ab4eb352b91db943172e64685a75dec776fef9e275a50c05acf53"
+      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.1/flipip-0.1.1_macOS_amd64.tar.gz"
+      sha256 "fe3cd5607b223ee5f814b2ca135879291d0072c3a206d16aacb77633259070a2"
+
+      def install
+        bin.install "flipip"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.0/flipip-0.1.0_linux_arm64.tar.gz"
-      sha256 "937e13d463f8dbdc422c7d36191a9bcd01cc808f318b321a4c899d5f358cdd54"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.0/flipip-0.1.0_linux_amd64.tar.gz"
-      sha256 "679e1509559093758038bcc95cd93dbb43e1cbfc59c254fe0f1a3650675fdb9f"
-    end
-  end
+      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.1/flipip-0.1.1_linux_amd64.tar.gz"
+      sha256 "81f778a1c34d5f99f583865fd489f37d2469b41f0c3b0709c6eb247d8844fe3d"
 
-  def install
-    bin.install "flipip"
+      def install
+        bin.install "flipip"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/drewstinnett/flipip/releases/download/v0.1.1/flipip-0.1.1_linux_arm64.tar.gz"
+      sha256 "dcfae802b5f668049d23941e21c0d35eb53c50e1dce3a64d5cd2d664248ede13"
+
+      def install
+        bin.install "flipip"
+      end
+    end
   end
 end
