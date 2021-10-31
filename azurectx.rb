@@ -5,21 +5,21 @@
 class Azurectx < Formula
   desc "Easily switch between Azure subscriptions"
   homepage "https://github.com/drewstinnett/azurectx-go"
-  version "0.1.0"
+  version "0.2.0"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.1.0/azurectx-0.1.0_macOS_arm64.tar.gz"
-      sha256 "56d33b9fba9d8a44da721d721b8de4b83f51d653e990b2bf1563cb70ea5c9bb9"
+      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.2.0/azurectx-0.2.0_macOS_arm64.tar.gz"
+      sha256 "0b1c0652cd5a2bc2dce56db806e99235b9d93e2b2e8135e09d4f63a1ecd568c1"
 
       def install
         bin.install "azurectx"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.1.0/azurectx-0.1.0_macOS_amd64.tar.gz"
-      sha256 "62296a2235a18158e523836dc0a4d953cb4b8e0faee90b9370b6f65734a82f45"
+      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.2.0/azurectx-0.2.0_macOS_amd64.tar.gz"
+      sha256 "aa6e45e1d5619d879a831060972ee754ffd6b188c1568c5f88ac51283a047161"
 
       def install
         bin.install "azurectx"
@@ -29,16 +29,16 @@ class Azurectx < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.1.0/azurectx-0.1.0_linux_amd64.tar.gz"
-      sha256 "59540a64d7a45c8b973b32b36afff273b7b5865936bb6787c20110d79241740b"
+      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.2.0/azurectx-0.2.0_linux_amd64.tar.gz"
+      sha256 "bc4c8e91ba65d627bb802f2ba8beeee0d32445001867cb1ee7150c725fbbc3fe"
 
       def install
         bin.install "azurectx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.1.0/azurectx-0.1.0_linux_arm64.tar.gz"
-      sha256 "63aa3c8c9d60f6defad5cba8c57ba50759081a739ab987ced45dd65ceaf80dc7"
+      url "https://github.com/drewstinnett/azurectx-go/releases/download/v0.2.0/azurectx-0.2.0_linux_arm64.tar.gz"
+      sha256 "73673e4f65f645896e845a6a004674ee969f4d65c71b02d3c1502d469f50a613"
 
       def install
         bin.install "azurectx"
