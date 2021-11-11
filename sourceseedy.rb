@@ -5,21 +5,21 @@
 class Sourceseedy < Formula
   desc "Easily switch between source directories"
   homepage "https://github.com/drewstinnett/sourceseedy"
-  version "0.2.5"
+  version "0.2.6"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_macOS_amd64.tar.gz"
-      sha256 "6c32613174bfd8878fe28769b2c2f1fed19c0a9a9b4838c5b530260de452bcb5"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.6/sourceseedy-0.2.6_macOS_amd64.tar.gz"
+      sha256 "efc4bf3fd41112d55f1843efd6a019f9aa5797af7c02e15cd493d145f1314e37"
 
       def install
         bin.install "sourceseedy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_macOS_arm64.tar.gz"
-      sha256 "0ac2fa187853df8869e9dd4557bf4a70ad7d35339cd83561239d24f75ee931f1"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.6/sourceseedy-0.2.6_macOS_arm64.tar.gz"
+      sha256 "537e707b65a9f00331ba016a37f8727e99208f0990aa3dc850ca7c0cd4945c67"
 
       def install
         bin.install "sourceseedy"
@@ -29,16 +29,16 @@ class Sourceseedy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_linux_arm64.tar.gz"
-      sha256 "cb3ae921c5f063c16a1f802c0a7dd6db022fb9fc4c25f0dee93398717b11fdb2"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.6/sourceseedy-0.2.6_linux_arm64.tar.gz"
+      sha256 "745e336963665c726664cecfecd18b309f12475c931fcc945fb3fcfac7c35957"
 
       def install
         bin.install "sourceseedy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.5/sourceseedy-0.2.5_linux_amd64.tar.gz"
-      sha256 "d3b88bccda735f821f4f871c52c9be276aa6fbe250881ea5d16195f29b1637e4"
+      url "https://github.com/drewstinnett/sourceseedy/releases/download/v0.2.6/sourceseedy-0.2.6_linux_amd64.tar.gz"
+      sha256 "084510611011fa283edb31f6483713035d48d61031ef133fbafd1913e4338801"
 
       def install
         bin.install "sourceseedy"
