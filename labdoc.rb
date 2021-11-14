@@ -5,21 +5,21 @@
 class Labdoc < Formula
   desc "Generate README from a template, with some handy GitLab data"
   homepage "https://github.com/drewstinnett/labdoc"
-  version "0.0.2"
+  version "0.0.3"
   license "BSD-2-Clause"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.2/labdoc-0.0.2_macOS_amd64.tar.gz"
-      sha256 "d5d1df3ad75c1f3213f7e5c21a9750fced4364467bee62f283050426e9bfc347"
+    if Hardware::CPU.arm?
+      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.3/labdoc-0.0.3_macOS_arm64.tar.gz"
+      sha256 "a1f25ea8ceeac374cdfc26309a7949aa4c39c63a4cb1a87f5ab6f30a3a714794"
 
       def install
         bin.install "labdoc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.2/labdoc-0.0.2_macOS_arm64.tar.gz"
-      sha256 "66c4320008bcb8157bd3af2963380d486ca1f3e6482f9a5105ee4750507b41a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.3/labdoc-0.0.3_macOS_amd64.tar.gz"
+      sha256 "1499147bcafb9d27ac156adde93faaa131d3e2482c787dbf402878b0114a85c4"
 
       def install
         bin.install "labdoc"
@@ -29,16 +29,16 @@ class Labdoc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.2/labdoc-0.0.2_linux_arm64.tar.gz"
-      sha256 "a9ca32eda84b1ce37f2d447e40e7e3756580130eed26969a9df6b41e2eeb3f41"
+      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.3/labdoc-0.0.3_linux_arm64.tar.gz"
+      sha256 "09a7313fcca332a2b0fcdcaccd0d2a79d9631254dec9b0a5b5299ee657cf1803"
 
       def install
         bin.install "labdoc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.2/labdoc-0.0.2_linux_amd64.tar.gz"
-      sha256 "47aa1bced9029bce3049d6d8079da32c66f15ad163eca6222359b21a956d47c0"
+      url "https://github.com/drewstinnett/labdoc/releases/download/v0.0.3/labdoc-0.0.3_linux_amd64.tar.gz"
+      sha256 "f154bb48a3c5e9ef7dcd7941ffdaf6b723e5f3079f71103d63c459081835b9ec"
 
       def install
         bin.install "labdoc"
