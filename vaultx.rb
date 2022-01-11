@@ -5,21 +5,21 @@
 class Vaultx < Formula
   desc "Generate README from a template, with some handy GitLab data"
   homepage "https://github.com/drewstinnett/vaultx"
-  version "0.2.0"
+  version "0.2.1"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.0/vaultx-0.2.0_macOS_amd64.tar.gz"
-      sha256 "a20e662f2d70eaee9639a2564295d49a56272faaab803ddb2b70af063ed5cf3a"
+      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.1/vaultx-0.2.1_macOS_amd64.tar.gz"
+      sha256 "d33d94bf9fd203ef2bdd5cd896f2526e898772a9d8600dcf54696b4b74b60701"
 
       def install
         bin.install "vaultx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.0/vaultx-0.2.0_macOS_arm64.tar.gz"
-      sha256 "fb425c844d22fa40e47ba42fbb51a320859ca66fde5be4e00d0a13ebf65f5753"
+      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.1/vaultx-0.2.1_macOS_arm64.tar.gz"
+      sha256 "d263db67622990d0bef10a5e352581d8821d9b868fb9a865981bbac85301159f"
 
       def install
         bin.install "vaultx"
@@ -29,16 +29,16 @@ class Vaultx < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.0/vaultx-0.2.0_linux_amd64.tar.gz"
-      sha256 "9e8ef20187457d55e8702245916043299f3745ab4766122d131a606bcaddf440"
+      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.1/vaultx-0.2.1_linux_amd64.tar.gz"
+      sha256 "b4b229b156a8cb402fdacb7fefe8d9b6b358acb45713983979508ea66eb7bd23"
 
       def install
         bin.install "vaultx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.0/vaultx-0.2.0_linux_arm64.tar.gz"
-      sha256 "a2650551cea04542c9fe555ad66f7cd7ad17c0c1028cf9144fd4e9c199a34f6d"
+      url "https://github.com/drewstinnett/vaultx/releases/download/v0.2.1/vaultx-0.2.1_linux_arm64.tar.gz"
+      sha256 "6db8fbd21317613bb22bbc6e64093f259edce5b1b97eb698208310237796d954"
 
       def install
         bin.install "vaultx"
