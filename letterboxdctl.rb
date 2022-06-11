@@ -5,21 +5,21 @@
 class Letterboxdctl < Formula
   desc "Letterboxd CLI Client"
   homepage "https://github.com/drewstinnett/letterboxdctl"
-  version "0.1.4"
+  version "0.1.5"
   license "BSD-2-Clause"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.4/letterboxdctl-0.1.4_macOS_arm64.tar.gz"
-      sha256 "90c76152443dba1fd2931b356b60f0633710b499ba95ff484d1cf7478a6ba2c6"
+      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.5/letterboxdctl-0.1.5_macOS_arm64.tar.gz"
+      sha256 "3c57e5dfe02ef1baa63329f81205f554d5e676d38f401107b245b205af5cec09"
 
       def install
         bin.install "letterboxdctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.4/letterboxdctl-0.1.4_macOS_amd64.tar.gz"
-      sha256 "a024df8795993fa88845f00033e5ae9a3f01d4ebb0a31637c5a4b7fa3ed7f14e"
+      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.5/letterboxdctl-0.1.5_macOS_amd64.tar.gz"
+      sha256 "f7f274db811e1289d3a6971151418b86d97dca0c2d5db630c4bf62569f6c730b"
 
       def install
         bin.install "letterboxdctl"
@@ -29,16 +29,16 @@ class Letterboxdctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.4/letterboxdctl-0.1.4_linux_arm64.tar.gz"
-      sha256 "fe913d6725f8ab5aefc649554e41010eedaac84a3dde325a208a42953ca0aae1"
+      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.5/letterboxdctl-0.1.5_linux_arm64.tar.gz"
+      sha256 "09c6aa861e04cf7a987aef8290a13009ed8de7364bc82a1fb66ebf87e78508d2"
 
       def install
         bin.install "letterboxdctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.4/letterboxdctl-0.1.4_linux_amd64.tar.gz"
-      sha256 "e0030a3c446e4ea3b7a0e7d423ded0fe7c734173049198732ac64974540ce8a3"
+      url "https://github.com/drewstinnett/letterboxdctl/releases/download/v0.1.5/letterboxdctl-0.1.5_linux_amd64.tar.gz"
+      sha256 "a93b5f19d338d3b1a98f762e550e9db4c33f879c165050ed2b87bbbb7b9aa208"
 
       def install
         bin.install "letterboxdctl"
